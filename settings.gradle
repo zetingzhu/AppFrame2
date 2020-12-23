@@ -1,0 +1,10 @@
+include ':MyZxingSample'
+include ':coordinatorlayoutsample'
+include ':LurCacheSample'
+include ':DataBindSample'
+include ':NettySample'
+include ':WorkManagerSample'
+include ':ZZTBanner'
+include ':app'
+rootProject.name = "AppFrame2"
+include ':zxingSample'
