@@ -83,6 +83,15 @@ public abstract class CheckPermissionsActivity extends Activity {
         }
     }
 
+    public boolean isHasPermissions() {
+        List<String> needRequestPermissonList = findDeniedPermissions(needPermissions);
+        if (null != needRequestPermissonList && needRequestPermissonList.size() > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     /**
      * 获取权限集中需要申请权限的列表
      *

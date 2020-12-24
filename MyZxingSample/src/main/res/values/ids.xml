@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- Copyright (C) 2012 ZXing authors
+ Copyright (C) 2008 ZXing authors
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -15,10 +15,14 @@
  limitations under the License.
  -->
 <resources>
-  <style name="CaptureTheme" parent="android:Theme.Holo">
-    <item name="android:windowFullscreen">true</item>
-    <item name="android:windowContentOverlay">@null</item>
-    <item name="android:windowActionBarOverlay">true</item>
-    <item name="android:windowActionModeOverlay">true</item>
-  </style>
+  <item type="id" name="decode"/>
+  <item type="id" name="decode_failed"/>
+  <item type="id" name="decode_succeeded"/>
+  <item type="id" name="launch_product_query"/>
+  <item type="id" name="quit"/>
+  <item type="id" name="restart_preview"/>
+  <item type="id" name="return_scan_result"/>
+
+  <item type="id" name="bgaqrcode_camera_preview" />
+
 </resources>

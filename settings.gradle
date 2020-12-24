@@ -1,3 +1,4 @@
+include ':MotionLayoutSample'
 include ':MyZxingSample'
 include ':coordinatorlayoutsample'
 include ':LurCacheSample'
