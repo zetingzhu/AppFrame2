@@ -4,8 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
-import cn.bingoogolapple.qrcode.core.ZXingView;
+import com.zzt.zxing.library.ZXingView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 
@@ -14,8 +15,8 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.bingoogolapple.qrcode.core.BarcodeType;
-import cn.bingoogolapple.qrcode.core.QRCodeView;
+import com.zzt.zxing.library.BarcodeType;
+import com.zzt.zxing.library.QRCodeView;
 
 public class TestScanActivity extends CheckPermissionsActivity implements QRCodeView.Delegate {
     private static final String TAG = TestScanActivity.class.getSimpleName();
@@ -71,8 +72,11 @@ public class TestScanActivity extends CheckPermissionsActivity implements QRCode
     public void onScanQRCodeSuccess(String result) {
         Log.i(TAG, "result:" + result);
         setTitle("扫描结果为：" + result);
-
-        mZXingView.startSpot(); // 开始识别
+//        mZXingView.startSpot(); // 开始识别
+        Intent intent = new Intent();
+        intent.putExtra("qrcode", result);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     @Override
@@ -96,6 +100,8 @@ public class TestScanActivity extends CheckPermissionsActivity implements QRCode
     @Override
     public void onScanQRCodeOpenCameraError() {
         Log.e(TAG, "打开相机出错");
+        Toast.makeText(TestScanActivity.this, "打开相机出错", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     public void onClick(View v) {

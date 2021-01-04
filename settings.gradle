@@ -1,3 +1,7 @@
+include ':drawerlayoutsample'
+include ':dragviewsample'
+include ':Zxinglibrary'
+include ':mylibrary2'
 include ':MotionLayoutSample'
 include ':MyZxingSample'
 include ':coordinatorlayoutsample'

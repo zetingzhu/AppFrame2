@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".ActivityMotionV1">
+        <activity android:name=".ActivityMotionV6"></activity>
+        <activity android:name=".ActivityMotionV5" />
+        <activity android:name=".ActivityMotionV4" />
+        <activity android:name=".ActivityMotionV3" />
+        <activity
+            android:name=".NotionMainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityMotionV2">
-        </activity>
-        <activity android:name=".MotionMainActivity">
-
-        </activity>
+        <activity android:name=".ActivityMotionV1" />
+        <activity android:name=".ActivityMotionV2" />
+        <activity android:name=".ActivityMotionV0" />
     </application>
 
 </manifest>

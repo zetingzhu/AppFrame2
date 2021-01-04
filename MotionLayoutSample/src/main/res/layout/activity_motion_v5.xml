@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <include layout="@layout/motion_09_coordinatorlayout_header" />
+        <!--    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+scroll
+  当ScrollView将要向下滚动的时候，优先滚动的是自己，当自己滚动到顶部头的时候，再开始触发滚动AppBarLayoout中的childView；
+  当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
+
+scroll | enterAlways
+  当ScrollView将要向下滚动的时候，优先滚动的是AppBarLayout中的childView，当childView完全滚动进入屏幕的时候，才开始滚动 ScrollView；
+  当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
+
+scroll | enterAlways | enterAlwaysCollapsed
+  当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+  当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动；
+
+scroll | exitUntilCollapsed
+  当ScrollView将要向下滚动的时候，优先滚动的是自己，当自己滚动到顶部头的时候，再开始触发滚动AppBarLayoout中的childView；
+  这和单纯使用scroll的效果是一致的；
+  当Scrollview将要向上滚动的时候，优先将AppBarLayout中的childView滚动至最小高度，然后scrollview才开始滚动。
+
+scroll | snap
+  snap 可以和上面任意一个组合使用，使用它可以确保childView不会滑动停止在中间的状态，
+  当我们松开手指的时候，要么完全显示，要么完全隐藏
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#1e376b"
+                android:scaleType="centerCrop"
+                android:src="@drawable/monterey" />
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="Monterey"
+                android:textColor="#FFF"
+                android:textSize="32dp"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+        </FrameLayout>
+          -->
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

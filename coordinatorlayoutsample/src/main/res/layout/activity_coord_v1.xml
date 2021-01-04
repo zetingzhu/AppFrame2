@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityCoordV1"
+    tools:ignore="MissingConstraints">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--
+        app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+        -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#D6EBEB"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed" />
+        <!--
+         app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed" -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="start|center_vertical"
+            android:text="固定不动的" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.zzt.mylibrary2.ScrollRecycleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

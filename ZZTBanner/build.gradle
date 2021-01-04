@@ -1,15 +1,18 @@
 plugins {
     id 'com.android.application'
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion getRootProject().compileSdkVersion
+    buildToolsVersion getRootProject().buildToolsVersion
 
     defaultConfig {
         applicationId "com.zzt.banner"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion getRootProject().minSdkVersion
+        targetSdkVersion getRootProject().targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -33,7 +36,27 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+/**
+ * Banner样式使用 左右移动，上下滚动，带入指示器
+ * https://github.com/zhpanvip/BannerViewPager/blob/master/README_CN.md
+ */
+    implementation 'com.github.zhpanvip:BannerViewPager:3.4.0'
+    implementation "androidx.core:core-ktx:1.3.2"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+// if u use AndroidX, use the following
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+
+}
+repositories {
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    mavenCentral()
 }

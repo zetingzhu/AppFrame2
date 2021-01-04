@@ -2,13 +2,13 @@ ext {
 
     compileSdkVersion = 28
     buildToolsVersion = '28.0.3'
-    minSdkVersion = 18
+    minSdkVersion = 19
     targetSdkVersion = 28
 
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: '28.0.3',
-            minSdkVersion    : 18,
+            minSdkVersion    : 19,
             targetSdkVersion : 28,
     ]
 

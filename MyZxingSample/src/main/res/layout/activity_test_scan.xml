@@ -7,7 +7,7 @@
 
 
 
-    <cn.bingoogolapple.qrcode.core.ZXingView
+    <com.zzt.zxing.library.ZXingView
         android:id="@+id/zxingview"
         style="@style/MatchMatch"
         app:qrcv_animTime="1000"
