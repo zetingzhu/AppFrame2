@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.LifecycleOwner;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,10 +16,13 @@ public class DrawerLayoutActivity extends AppCompatActivity {
     DrawerLayout drawer_ly;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        LifecycleUtil observer = new LifecycleUtil();
+        getLifecycle().addObserver(observer);
+
         setContentView(R.layout.activity_drawer_layout);
         drawer_ly = findViewById(R.id.drawer_ly);
 

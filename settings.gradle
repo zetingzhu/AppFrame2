@@ -1,3 +1,5 @@
+include ':messagev2'
+include ':messagev1'
 include ':drawerlayoutsample'
 include ':dragviewsample'
 include ':Zxinglibrary'

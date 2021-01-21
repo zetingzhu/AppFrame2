@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zzt.messagev1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppFrame2">
+        <service
+            android:name="com.zzt.test.MyServiceTestV1"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.zzt.test.MyServiceTestV0"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MessageActivityV1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MsgerService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.zzt.aidl.MyAidlService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.zzt.optbinder.MyBinderService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.zzt.binderSmp1.MyStudentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.zzt.binderbook.BookService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.zzt.book" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

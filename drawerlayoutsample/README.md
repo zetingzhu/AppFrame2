@@ -1,0 +1,2 @@
+LifecycleUtil
+生命周期感知类

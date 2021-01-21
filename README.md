@@ -35,3 +35,7 @@ Banner 循环滚动，支持上下，左右，自定义指示器
 drawerlayoutsample
 drawerlayout 使用
 
+messagev1
+AIDL Binder 服务端
+messagev2
+AIDL Binder 客户端
