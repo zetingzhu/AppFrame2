@@ -101,13 +101,17 @@ class DiskLruCacheUtils {
          * 获取缓存存储的位置: data/package/cache/AD/
          */
         private fun getADCacheDir(): File {
-            val externalStorageAvailable = Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
-            val cachePath = if (externalStorageAvailable) mContext?.externalCacheDir?.path else mContext?.cacheDir?.path
+            val externalStorageAvailable =
+                Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
+            val cachePath =
+                if (externalStorageAvailable) mContext?.externalCacheDir?.path else mContext?.cacheDir?.path
             return File(cachePath + File.separator + adDir + File.separator)
         }
 
         fun getDiskCacheDir(context: Context, uniqueName: String): File? {
-            val cachePath: String? = if (Environment.MEDIA_MOUNTED == Environment.getExternalStorageState() || !isExternalStorageRemovable()) context?.getExternalCacheDir()?.getPath() else context.getCacheDir().getPath()
+            val cachePath: String? =
+                if (Environment.MEDIA_MOUNTED == Environment.getExternalStorageState() || !isExternalStorageRemovable()) context?.getExternalCacheDir()
+                    ?.getPath() else context.getCacheDir().getPath()
             return File(cachePath + File.separator.toString() + uniqueName)
         }
     }

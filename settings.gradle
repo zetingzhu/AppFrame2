@@ -1,3 +1,4 @@
+include ':SideHeadRecycleSamples'
 include ':messagev2'
 include ':messagev1'
 include ':drawerlayoutsample'
