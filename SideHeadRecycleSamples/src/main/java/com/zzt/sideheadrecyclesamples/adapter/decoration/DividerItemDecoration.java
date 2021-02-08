@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.zzt.sideheadrecyclesamples.R;
 
 /**
- *
+ * 列表分割线
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private float dividerHeight;

@@ -18,6 +18,9 @@ import com.zzt.sideheadrecyclesamples.view.SideIndexBar;
 
 import java.util.List;
 
+/**
+ * 侧边栏字母导航
+ */
 public class SideHeadActivity extends AppCompatActivity {
 
     private static final String TAG = SideHeadActivity.class.getSimpleName();
@@ -47,7 +50,7 @@ public class SideHeadActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.addItemDecoration(new SectionItemDecoration(SideHeadActivity.this, mList), 0);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(SideHeadActivity.this), 1);
+//        mRecyclerView.addItemDecoration(new DividerItemDecoration(SideHeadActivity.this), 1);
         mAdapter = new CityListAdapter(SideHeadActivity.this, mList);
         mAdapter.autoLocate(true);
         mAdapter.setInnerListener((position, data1) -> {

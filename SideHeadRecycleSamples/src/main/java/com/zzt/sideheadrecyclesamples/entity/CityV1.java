@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * author Bro0cL on 2016/1/26.
+ * 城市列表对象
  */
 public class CityV1 {
     private String name;

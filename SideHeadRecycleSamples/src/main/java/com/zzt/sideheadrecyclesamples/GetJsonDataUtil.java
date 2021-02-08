@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 /**
  * @author: zeting
  * @date: 2021/2/7
+ * 读取 assets 下面文件
  */
 public class GetJsonDataUtil {
     public static String getJson(Context context, String fileName) {
