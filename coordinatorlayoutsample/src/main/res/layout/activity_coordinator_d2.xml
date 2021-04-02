@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior=".MyBehavior">
+
+        <LinearLayout
+            android:id="@+id/ll_vv1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这个地顶部的，看看效果"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/teal_200"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_task_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50dp"
+            android:background="#7997ED"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="这个是下面的标题" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#778C5A"
+        app:layout_behavior=".MyScrollingViewBehavior" />
+    <!--顶部滑动收缩的view-->
+    <FrameLayout
+        android:id="@+id/ll_top_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:background="#4EF95959"
+        android:orientation="horizontal"
+        app:layout_behavior=".NoviceBehavior22" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

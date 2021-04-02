@@ -22,6 +22,9 @@ public class CoordMainActivity extends AppCompatActivity {
         List<StartListView.DemoInfo> demoList = new ArrayList<>();
         demoList.add(start_list.new DemoInfo("带有recycleview darw", "带有recycleview darw", MainCorrdinatorActivity.class));
         demoList.add(start_list.new DemoInfo("上下联动", "", ActivityCoordV1.class));
+        demoList.add(start_list.new DemoInfo("测试1", "", ActCoordinatorD1.class));
+        demoList.add(start_list.new DemoInfo("第三个view 绑定第一个一起滑动", "", ActCoordinatorD2.class));
+        demoList.add(start_list.new DemoInfo("头部滚动折叠", "", ActCoordinatorD3.class));
         start_list.setDemos(demoList);
 
     }
